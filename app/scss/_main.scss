@@ -1,0 +1,239 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	box-sizing: border-box;
+	font-family: var(--main-font);
+	font-size: var(--font-size-text);
+	font-weight: var(--normal);
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.text {
+	text-align: center;
+	color: var(--light-lavender);
+}
+
+@media screen and (min-width: 1440px) {
+	.container {
+		display: flex;
+		flex-direction: row;
+		width: 730px;
+		height: 510px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		box-shadow: 23px 25px 45px 8px var(--dark-gray-blue-b);
+		border-radius: 30px;
+
+		.score,
+		.summary {
+			flex: 1;
+		}
+	}
+}
+
+.score {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.8rem 3rem;
+	background-image: linear-gradient(
+		var(--gradient-purple-blue-bg),
+		var(--gradient-royal-blue-bg)
+	);
+	height: 22.1975rem;
+	width: 100%;
+	border-radius: 0 0 30px 30px;
+
+	@media screen and (min-width: 1440px) {
+		border-radius: 30px;
+		height: 100%;
+		padding: 2rem 3rem;
+		justify-content: space-evenly;
+	}
+	h3 {
+		font-size: 17px;
+		font-weight: var(--normal);
+		color: var(--light-lavender);
+		padding-top: 0.625rem;
+		padding-bottom: 0.5rem;
+
+		@media screen and (min-width: 1440px) {
+			font-size: 22px;
+		}
+	}
+
+	&__points {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-image: linear-gradient(
+			var(--gradient-violet-blue-c),
+			var(--gradient-persian-blue-c)
+		);
+		border-radius: 50%;
+		width: 8.625rem;
+		height: 8.625rem;
+		margin-top: 15px;
+
+		@media screen and (min-width: 1440px) {
+			width: 200px;
+			height: 200px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 2.9rem;
+
+			@media screen and (min-width: 1440px) {
+				font-size: 3.5rem;
+			}
+		}
+		p {
+			font-size: 0.8125rem;
+			margin: 0;
+			color: var(--light-lavender-2);
+
+			@media screen and (min-width: 1440px) {
+				font-size: var(--font-size-text);
+			}
+		}
+	}
+
+	h2 {
+		font-size: 1.4375rem;
+		font-weight: var(--normal);
+		padding-top: 1.25rem;
+		@media screen and (min-width: 1440px) {
+			font-size: 1.75rem;
+		}
+	}
+
+	p {
+		font-size: 1rem;
+		margin-top: 0.625rem;
+
+		@media screen and (min-width: 1440px) {
+			font-size: var(--font-size-text);
+			padding-inline: 1rem;
+		}
+	}
+}
+
+.summary {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.7rem;
+	@media screen and (min-width: 1440px) {
+		height: 100%;
+		padding-top: 3rem;
+		border-radius: 30px;
+	}
+
+	h2 {
+		color: var(--dark-gray-blue);
+		font-size: var(--font-size-text);
+		align-self: self-start;
+		padding-bottom: 5px;
+		@media screen and (min-width: 1440px) {
+			font-size: 20px;
+		}
+	}
+
+	.summary__list:nth-child(1) {
+		background-color: red;
+	}
+
+	&__list {
+		background-color: #777;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-radius: 5px;
+		width: 100%;
+		padding-left: 14px;
+		padding-right: 14px;
+
+		.left {
+			display: flex;
+			gap: 10px;
+
+			h4 {
+				font-weight: var(--normal);
+			}
+		}
+
+		.right {
+			p {
+				color: var(--dark-gray-blue-a);
+				font-weight: var(--bold);
+
+				span {
+					color: var(--dark-gray-blue);
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			background-color: var(--light-red-bg);
+
+			h4 {
+				color: var(--light-red);
+			}
+		}
+		&:nth-child(3) {
+			background-color: var(--orange-yellow-bg);
+			h4 {
+				color: var(--orange-yellow);
+			}
+		}
+		&:nth-child(4) {
+			background-color: var(--green-bg);
+			h4 {
+				color: var(--green);
+			}
+		}
+		&:nth-child(5) {
+			background-color: var(--cobalt-blue-bg);
+			h4 {
+				color: var(--cobalt-blue);
+			}
+		}
+	}
+
+	button {
+		width: 100%;
+		border-radius: 25px;
+		border: none;
+		background-color: var(--dark-gray-blue);
+		height: 3.4375rem;
+		margin-top: 10px;
+		color: var(--white);
+		font-size: var(--font-size-text);
+
+		&:hover {
+			background-color: var(--cobalt-blue);
+		}
+	}
+}
